@@ -1,0 +1,17 @@
+# Diretórios e arquivos gerados pelo sistema e Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ambientes Virtuais
+venv/
+env/
+.env
+.venv
+
+# Git
+.git/
+.gitignore

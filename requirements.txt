@@ -1,0 +1,11 @@
+fastapi[standard]
+uvicorn
+dotenv
+langchain
+langgraph
+langgraph-checkpoint-postgres
+langchain-openai
+psycopg[binary,pool]
+sqlalchemy[asyncio]
+asyncpg
+httpx
