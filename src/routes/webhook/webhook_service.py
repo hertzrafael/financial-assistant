@@ -2,7 +2,6 @@ from fastapi import Request, HTTPException, status
 
 
 async def message_upsert(request: Request):
-    print("PASSOU UPSERT")
     body = await request.json()
 
     remote_jid = body['data']['key']['remoteJid']
@@ -24,20 +23,4 @@ async def message_upsert(request: Request):
     print(f'[LOG] A IA RESPONDEU PARA {to}: {ai_response}')
     
     return {"message": "OK"}
-    
 
-async def connection_update(request: Request):
-    print('connection method')
-    # async with session_maker() as session:
-    #     async with session.begin():
-    #         body = await request.json()
-    #         status = body['data']['state']
-            
-    #         instance = await repository.get_instance_from_query(session, InstanceModel.evolution_name == instance_id)
-    #         if not instance:
-    #             raise HTTPException(
-    #                 status.HTTP_404_NOT_FOUND,
-    #                 f"Instância com id {instance_id} não encontrada."
-    #             )
-            
-    #         await repository.patch_instance(session, instance.id, connection_status=status)
